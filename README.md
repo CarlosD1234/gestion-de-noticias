@@ -29,5 +29,6 @@
       </li>
     </ul>
   </p>
-
+  <h3>npm</h3>
+  <p>npm install firebase</p>
 </main>
