@@ -1,0 +1,64 @@
+.line {
+  margin: 15px 0;
+  border-top: 1px solid rgb(219, 212, 212);
+}
+
+.container-news {
+  padding: 0rem 8rem;
+}
+
+/* UNIQUE NEWS */
+.titulo {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+
+/* .link {
+} */
+
+button {
+  font-size: 16px;
+}
+
+input {
+  height: 25px;
+  margin: 7px 0;
+}
+
+textarea {
+  height: 40px;
+}
+
+.parrafo {
+  text-align: justify;
+}
+
+/* FORMULARIO */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.etiqueta {
+  display: block;
+}
+
+/* MEDIA REPONSIVE */
+@media (min-width: 1368px) {
+  .container-news {
+    padding: 0rem 15rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-news {
+    padding: 0rem 2rem;
+  }
+}
