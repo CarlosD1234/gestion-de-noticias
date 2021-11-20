@@ -1,11 +1,15 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import News from './components/News'
 
+
+
 function App() {
 
-  
+  /* NOTICIAS EN GENERAL */
+
   const [news, setNews] = useState([]);
 
+  /* API NOTICIAS */
   const consultarApi = async () => {
     const api = await fetch ("http://webhose.io/filterWebContent?token=b1f282e4-542e-4401-b648-e84962baa0ec&q=site_type:news%20country:CL");
     const newsFullContent = await api.json();
@@ -23,7 +27,6 @@ function App() {
   useEffect ( () => {
     consultarApi();
   }, []);
-
   
   return (
     <Fragment>
