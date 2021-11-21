@@ -31,4 +31,5 @@
   </p>
   <h3>npm</h3>
   <p>npm install firebase</p>
+  <p>npm install react-router-dom@6</p>
 </main>
