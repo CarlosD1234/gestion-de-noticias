@@ -30,8 +30,12 @@
     </ul>
   </p>
   <h3>npm</h3>
-  <li>npm install firebase</li>
-  <li>npm install react-router-dom@6</li>
+  <ul>
+    <li>npm install firebase</li>
+    <li>npm install react-router-dom@6</li>
+  </ul>
   <h3>bootstrap</h3>
-  <li>4.1</li>  
+  <ul>
+    <li>4.1</li>
+  </ul>
 </main>
