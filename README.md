@@ -29,5 +29,13 @@
       </li>
     </ul>
   </p>
-
+  <h3>npm</h3>
+  <ul>
+    <li>npm install firebase</li>
+    <li>npm install react-router-dom@6</li>
+  </ul>
+  <h3>bootstrap</h3>
+  <ul>
+    <li>4.1</li>
+  </ul>
 </main>
