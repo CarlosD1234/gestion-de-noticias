@@ -1,0 +1,16 @@
+p {
+  margin: 0;
+}
+p span {
+  font-weight: bold;
+}
+
+.eliminar-noticia {
+  background-color: red;
+  color: white;
+}
+
+.eliminar-noticia:hover {
+  cursor: pointer;
+  background-color: rgb(148, 26, 26);
+}

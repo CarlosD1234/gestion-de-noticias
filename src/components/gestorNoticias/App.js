@@ -1,6 +1,6 @@
-import React, { Fragment, useState, useEffect } from 'react';
-import News from './components/News'
-
+import React, { Fragment, useState } from 'react';
+import News from '../News'
+import '../../style/App.css'
 
 
 function App() {
@@ -20,23 +20,19 @@ function App() {
       news.etiqueta ="",
       news.comentario = ""
     ));
-    console.log(news);
+    //console.log(news);
     setNews(news)
   };
-
-  useEffect ( () => {
-    consultarApi();
-  }, []);
   
   return (
     <Fragment>
 
-        <p>Noticias</p>
-
-        <button onClick = {consultarApi}>
-          Refresh
-        </button>
-
+        <h1 className = "titulo"><span>Ge</span>stor de <span>N</span>oticias <span>N</span>acionales</h1>
+        <div style = {{textAlign:"center"}}>
+          <button onClick = {consultarApi} className= "refreshButton">
+            Actualizar
+          </button>
+        </div>
         <section>
           {news.map( noticia => (
             <News

@@ -1,6 +1,6 @@
 .line {
   margin: 15px 0;
-  border-top: 1px solid rgb(219, 212, 212);
+  border-top: 1px solid rgb(170, 163, 163);
 }
 
 .container-news {
@@ -8,8 +8,9 @@
 }
 
 /* UNIQUE NEWS */
-.titulo {
+.titulo-noticia {
   margin-top: 0;
+  text-align: center;
 }
 
 img {
@@ -32,8 +33,16 @@ input {
   margin: 7px 0;
 }
 
+input[type="text"]:focus {
+  background-color: rgb(214, 233, 240);
+}
+
 textarea {
-  height: 40px;
+  height: 80px;
+  resize: none;
+}
+textarea[type="text"]:focus {
+  background-color: rgb(214, 233, 240);
 }
 
 .parrafo {
@@ -48,6 +57,13 @@ textarea {
 
 .etiqueta {
   display: block;
+}
+
+.comentario-error {
+  font-size: 20px;
+  color: rgb(233, 13, 13);
+  background-color: rgb(248, 196, 196);
+  border-radius: 4px;
 }
 
 /* MEDIA REPONSIVE */

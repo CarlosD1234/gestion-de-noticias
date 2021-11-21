@@ -1,7 +1,4 @@
-import React, {useState, useEffect} from 'react';
-
-import db from '../firebase';
-import { onSnapshot, collection } from '@firebase/firestore';
+import React, {useState} from 'react';
 
 import { handleEdit } from '../utility';
 
@@ -10,17 +7,6 @@ import '../style/News.css'
 
 
 const News = ({noticia}) => {
-    /* NOTICIAS ETIQUETADAS */
-    const [noticiasEtiquetadas, setNoticiasEtiquetadas] = useState ([]);
-    /* FIREBASE BASE DE DATOS, CON ESTO SE DEBERIA RECORRER LO YA ETIQUETADO*/
-    useEffect (
-        () =>
-        onSnapshot (collection(db,"noticias-etiquetadas"), (snapshot) =>
-        setNoticiasEtiquetadas(snapshot.docs.map( (doc)  => ({...doc.data(),id: doc.id})))
-        ),
-        []
-    );
-
 
     /* INFO NOTICIA IMAGEN */
     const imagen = noticia.thread.main_image;
@@ -62,18 +48,25 @@ const News = ({noticia}) => {
         //Mandar a base de datos (ya que paso la verificacion)
         
         handleEdit(noticia);
-        console.log(noticia);
+
+        setInfo({
+            etiqueta: "",
+            comentario: ""
+        })
+
+        alert("¡El etiquetado y el comentario han sido subidos exitosamente!")
+
     }
 
     return (
         <div className ="container-news">
             <div className ="line"></div>
-            <h1 className = "titulo">{noticia.title}</h1>
+            <h1 className = "titulo-noticia">{noticia.title}</h1>
             <img src= {imagen} alt={alt}/>
             <a className = "link" href={noticia.url}>Más información aquí</a>
             <p className = "parrafo">{noticia.text}</p>
             <form className ="" onSubmit = {submitInfo}>
-                <button>
+                <button className = "refreshButton">
                     Subir
                 </button>
                 <input
@@ -95,7 +88,7 @@ const News = ({noticia}) => {
             </form>
 
             {
-                error ? <p>Por favor rellene todos los campos</p>
+                error ? <p className="comentario-error">Por favor rellene todos los campos</p>
                 : null
             }
 
