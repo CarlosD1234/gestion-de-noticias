@@ -1,16 +1,36 @@
 p {
   margin: 0;
+  word-wrap: break-word;
 }
 p span {
   font-weight: bold;
 }
 
 .eliminar-noticia {
-  background-color: red;
+  background-color: rgb(231, 18, 18);
   color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+  opacity: 0.9;
 }
 
 .eliminar-noticia:hover {
+  opacity: 1;
   cursor: pointer;
   background-color: rgb(148, 26, 26);
+}
+
+.editar-noticia {
+  opacity: 0.9;
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: rgb(212, 216, 212);
+  color: rgb(0, 0, 0);
+}
+
+.editar-noticia:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: rgb(146, 145, 145);
 }

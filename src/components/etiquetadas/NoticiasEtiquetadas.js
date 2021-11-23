@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import db from '../../firebase';
 import { onSnapshot, collection } from '@firebase/firestore';
-import { handleDelete } from '../../utility';
+import { handleDelete, handleEdit2 } from '../../utility';
 import '../../style/NoticiasEtiquetadas.css';
 
 // Esta informacion se ordena por id si no recuerdo mal, por lo que se podria mejorar
@@ -30,6 +30,7 @@ const NoticiasEtiquetadas = () => {
                     <button className= "eliminar-noticia" onClick = {() => {handleDelete(noticia.uuid)}}>
                         Eliminar noticia
                     </button>
+                    <button className="editar-noticia" onClick = {() => {handleEdit2(noticia)}}>Editar</button>
                 </div>
             </Fragment>
         ))}

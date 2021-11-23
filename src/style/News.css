@@ -9,6 +9,7 @@
 
 /* UNIQUE NEWS */
 .titulo-noticia {
+  word-wrap: break-word;
   margin-top: 0;
   text-align: center;
 }
@@ -47,6 +48,7 @@ textarea[type="text"]:focus {
 
 .parrafo {
   text-align: justify;
+  word-wrap: break-word;
 }
 
 /* FORMULARIO */
