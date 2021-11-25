@@ -28,6 +28,25 @@ img {
 button {
   font-size: 16px;
 }
+.button-upload {
+  background-color: #1c7ab8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  opacity: 0.9;
+  transition: 0.3s;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid #0a436b;
+}
+.button-upload:hover {
+  background-color: #276792;
+  opacity: 1;
+}
 
 input {
   height: 25px;

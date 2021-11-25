@@ -1,13 +1,28 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import News from '../News'
 import '../../style/App.css'
 
 
 function App() {
 
+  let noticiasActuales = JSON.parse(localStorage.getItem('news'));
+  if(!noticiasActuales){
+    noticiasActuales = [];
+  }
+
   /* NOTICIAS EN GENERAL */
 
-  const [news, setNews] = useState([]);
+  const [news, setNews] = useState(noticiasActuales);
+
+  /* LOCAL STORAGE ALL NEWS */
+  useEffect ( () => {
+    if (noticiasActuales) {
+      localStorage.setItem('news',JSON.stringify(news))
+    } else {
+      localStorage.setItem('news', JSON.stringify([]));
+    }
+
+  }, [news,noticiasActuales] );
 
   /* API NOTICIAS */
   const consultarApi = async () => {

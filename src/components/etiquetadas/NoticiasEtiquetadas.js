@@ -18,23 +18,26 @@ const NoticiasEtiquetadas = () => {
     );
     
     return (
-    <div className = "container-news">
-        {noticiasEtiquetadas.map( noticia => (
-            <Fragment key = {noticia.uuid}>
-                <div className = "line"></div>
-                <div>
-                    <h3>{noticia.title}</h3>
-                    <a href={noticia.url}>Noticia original</a>
-                    <p><span>Etiqueta:</span> {noticia.etiqueta}</p>
-                    <p><span>Comentario analista:</span> {noticia.comentario}</p>
-                    <button className= "eliminar-noticia" onClick = {() => {handleDelete(noticia.uuid)}}>
-                        Eliminar noticia
-                    </button>
-                    <button className="editar-noticia" onClick = {() => {handleEdit2(noticia)}}>Editar</button>
-                </div>
-            </Fragment>
-        ))}
-    </div>
+        <div className = "container-news">
+            {/* Si la noticia tiene un comentario, entonces lo muestra */}
+            {noticiasEtiquetadas.map( noticia => (
+                noticia.comentario != "" ? 
+                <Fragment key = {noticia.uuid}>
+                    <div className = "line"></div>
+                    <div>
+                        <h3>{noticia.title}</h3>
+                        <a href={noticia.url}>Noticia original</a>
+                        <p><span>Etiqueta:</span> {noticia.etiqueta}</p>
+                        <p><span>Comentario analista:</span> {noticia.comentario}</p>
+                        <button className= "eliminar-noticia" onClick = {() => {handleDelete(noticia.uuid)}}>
+                            Eliminar noticia
+                        </button>
+                        <button className="editar-noticia" onClick = {() => {handleEdit2(noticia)}}>Editar</button>
+                    </div>
+                </Fragment>
+                : null
+            ))}
+        </div>
     );
 }
 

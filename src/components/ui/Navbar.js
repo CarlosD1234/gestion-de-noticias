@@ -33,6 +33,14 @@ export const Navbar = () => {
                     <NavLink 
 
                         className="nav-item nav-link" 
+                        to="/etiquetar-noticias"
+                    >
+                        Etiquetar noticias
+                    </NavLink>
+
+                    <NavLink 
+
+                        className="nav-item nav-link" 
                         to="/noticias-etiquetadas"
                     >
                         Noticias etiquetadas
