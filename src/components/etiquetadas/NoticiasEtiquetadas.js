@@ -4,7 +4,7 @@ import { onSnapshot, collection } from '@firebase/firestore';
 import { handleDelete, handleEdit2 } from '../../utility';
 import '../../style/NoticiasEtiquetadas.css';
 
-// Esta informacion se ordena por id si no recuerdo mal, por lo que se podria mejorar
+// Esta información se ordena por id si no recuerdo mal, por lo que se podria mejorar
 const NoticiasEtiquetadas = () => {
 
     const [noticiasEtiquetadas, setNoticiasEtiquetadas] = useState ([]);

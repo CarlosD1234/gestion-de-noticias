@@ -29,7 +29,7 @@ export const handleEdit2 = async (noticia) => {
 
 /* DELETE INFO */
 export const handleDelete= async (id) => {
-    if (window.confirm("¿Estas seguro que quieres eliminar PERMANENTEMENTE este etiquetado?")){
+    if (window.confirm("¿Estás seguro que quieres eliminar PERMANENTEMENTE este etiquetado?")){
         const docRef = doc(db,"noticias-etiquetadas",id);
         await deleteDoc(docRef);
     }
