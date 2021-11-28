@@ -110,6 +110,11 @@ const EtiquetarNoticias = () => {
             : null
 
             ))}
+            <div>
+                <h2 className="h1-no-mas-noticias">No hay más noticias que etiquetar</h2>
+                <h1 className="h1-no-mas-noticias">...</h1>
+            </div>
+            
         </div>
         
     );

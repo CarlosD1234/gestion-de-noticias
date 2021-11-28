@@ -1,0 +1,49 @@
+.h1-home{
+    justify-content: center;
+    align-content: center;
+    color:#180E8C;
+    text-decoration: none;
+    display: flex;
+    font-size: 45px;
+}
+
+
+.comofunciona{
+    background-color: #BDD0FB;
+    border-radius: 25px;
+    padding: 90px 40px;
+    text-align: justify;
+    font-size: x-large;
+    box-shadow: -60px -16px #7D97F4;
+}
+
+#parent {
+    margin: 0;
+    width: 100%;
+}
+.left {
+    margin-top: 15rem;
+    padding-left: 10rem;
+    float: left;
+    width: 30%;
+}
+.right {
+    overflow: hidden;
+    width: 70%;
+}
+
+/* MEDIA REPONSIVE */
+@media (min-width: 1368px) {
+    .h1-home {
+      font-size: 90px;
+
+      
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .h1-home {
+      font-size: 30px;
+
+    }
+  }

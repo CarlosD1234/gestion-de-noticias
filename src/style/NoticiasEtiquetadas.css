@@ -34,3 +34,10 @@ p span {
   cursor: pointer;
   background-color: rgb(146, 145, 145);
 }
+
+.h1-no-mas-noticias{
+  display: flex;
+  justify-content: center;
+  
+}
+
