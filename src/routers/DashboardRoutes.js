@@ -1,13 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-
-
 import App from '../components/gestorNoticias/App';
 import { Navbar } from '../components/ui/Navbar';
 import { InicioScreen } from '../components/inicio/InicioScreen';
 import NoticiasEtiquetadas from '../components/etiquetadas/NoticiasEtiquetadas';
 import EtiquetarNoticias from '../components/etiquetar/EtiquetarNoticias'
-import { About } from '../components/about/About';
-
 
 export const DashboardRoutes = () => {
     return ( 
@@ -18,10 +14,8 @@ export const DashboardRoutes = () => {
             <Route path="gestor-de-noticias" element={<App/>} />
             <Route path="etiquetar-noticias" element = {<EtiquetarNoticias/>}/>
             <Route path="noticias-etiquetadas" element = {<NoticiasEtiquetadas/>}/>
-            <Route path="about" element={<About/>} />
-
             <Route path="/" element={<InicioScreen/>} />
         </Routes>
         </>
-     );
+    );
 }

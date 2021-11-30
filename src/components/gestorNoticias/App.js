@@ -24,17 +24,17 @@ function App() {
 
   }, [news,noticiasActuales] );
 
-  /* API NOTICIAS */
-  const consultarApi = async () => {
+   /* API NOTICIAS */
+    const consultarApi = async () => {
     const api = await fetch ("https://api.webz.io/filterWebContent?token=cfdeea2d-44d7-492c-b1ff-eba011521a89&format=json&sort=crawled&q=site_type%3Anews%20thread.country%3ACL");
     const newsFullContent = await api.json();
     const news = newsFullContent.posts;
 
     //Aqui agrega campos al objeto, pero creo que no era la manera correcta, revisar
-    news.map( news => (
-      news.etiqueta ="",
-      news.comentario = ""
-    ));
+    news.forEach( noticia => {
+      noticia.etiqueta ="";
+      noticia.comentario = "";
+  });
     //console.log(news);
     setNews(news)
   };

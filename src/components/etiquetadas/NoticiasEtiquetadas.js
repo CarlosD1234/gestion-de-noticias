@@ -21,7 +21,7 @@ const NoticiasEtiquetadas = () => {
         <div className = "container-news">
             {/* Si la noticia tiene un comentario, entonces lo muestra */}
             {noticiasEtiquetadas.map( noticia => (
-                noticia.comentario != "" ? 
+                noticia.comentario !== "" ? 
                 <Fragment key = {noticia.uuid}>
                     <div className = "line"></div>
                     <div>
