@@ -26,7 +26,7 @@ function App() {
 
   /* API NOTICIAS */
   const consultarApi = async () => {
-    const api = await fetch ("http://webhose.io/filterWebContent?token=b1f282e4-542e-4401-b648-e84962baa0ec&q=site_type:news%20country:CL");
+    const api = await fetch ("https://api.webz.io/filterWebContent?token=cfdeea2d-44d7-492c-b1ff-eba011521a89&format=json&sort=crawled&q=site_type%3Anews%20thread.country%3ACL");
     const newsFullContent = await api.json();
     const news = newsFullContent.posts;
 
